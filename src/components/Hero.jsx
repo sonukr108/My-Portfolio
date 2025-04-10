@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion";
 import Image from '../assets/herobg.svg'
-import MyImage from '../assets/herobg1.svg'
+import MyImage from '../assets/myimage.svg'
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const texts = [
@@ -25,7 +25,7 @@ const Hero = () => {
         return () => clearInterval(interval);
     }, []);
     return (
-        <div id='home' className='w-full px-[10%] flex flex-col items-center pt-30 pb-30 md:pt-25 scroll-smooth'>
+        <div id='home' className='w-full px-[10%] flex flex-col items-center pt-30 md:pb-42 md:pt-25 scroll-smooth'>
             <div className='z-0 absolute hidden md:block'>
                 <img src={Image} alt="my image" className='' />
             </div>
@@ -33,7 +33,7 @@ const Hero = () => {
                 <img src={MyImage} alt="my image" />
             </div>
             <div className='w-full z-10'>
-                <div className='pt-5 md:pt-20 lg:pt-32 md:w-[60%] flex flex-col gap-1 lg:gap-3'>
+                <div className='pt-5 md:pt-20 lg:pt-32 lg:pl-8 md:w-[60%] flex flex-col gap-1 lg:gap-3'>
                     <p className='text-3xl font-bold lg:text-5xl'>HI, I AM SONU!</p>
                     <p className="text-xl lg:text-3xl font-semibold text-wrap">
                         I'm a&nbsp;

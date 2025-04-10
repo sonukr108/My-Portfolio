@@ -21,10 +21,10 @@ const Navbar = () => {
                     </div>
                     <div className='hidden md:flex text-sm lg:text-lg'>
                         <ul className='list-none text-gray-300 w-full flex gap-2 lg:gap-7 items-center justify-center'>
-                            <li className='py-1 hover:text-white hover:border-b-2'><a href="#home" onClick={() => setMenu(false)}>HOME</a></li>
-                            <li className='py-1 hover:text-white hover:border-b-2'><a href="#projects" onClick={() => setMenu(false)}>PROJECTS</a></li>
-                            <li className='py-1 hover:text-white hover:border-b-2'><a href="#about" onClick={() => setMenu(false)}>ABOUT ME</a></li>
-                            <li className='py-1 hover:text-white hover:border-b-2'><a href="#contact" onClick={() => setMenu(false)}>CONTACT US</a></li>
+                            <li className='py-1 hover:text-white hover:border-b-2'><a href="#home">HOME</a></li>
+                            <li className='py-1 hover:text-white hover:border-b-2'><a href="#about">ABOUT ME</a></li>
+                            <li className='py-1 hover:text-white hover:border-b-2'><a href="#projects">PROJECTS</a></li>
+                            <li className='py-1 hover:text-white hover:border-b-2'><a href="#contact">CONTACT US</a></li>
                             <li className='py-2 hover:text-black hover:bg-white px-3 border-2 hover:rounded-xl transition-all duration-400'><a href="https://github.com/sonukr108" target='_blank'>MY GITHUB</a></li>
                         </ul>
                     </div>
@@ -33,8 +33,8 @@ const Navbar = () => {
                     <div className='w-full pt-4 flex items-center justify-center'>
                         <ul className='list-none w-full flex flex-col gap-3 items-center justify-center'>
                             <li><a href="#home" onClick={() => setMenu(false)}>HOME</a></li>
-                            <li><a href="#projects" onClick={() => setMenu(false)}>PROJECTS</a></li>
                             <li><a href="#about" onClick={() => setMenu(false)}>ABOUT ME</a></li>
+                            <li><a href="#projects" onClick={() => setMenu(false)}>PROJECTS</a></li>
                             <li><a href="#contact" onClick={() => setMenu(false)}>CONTACT US</a></li>
                             <li className='py-2 text-black bg-white px-3 border-2 rounded-xl transition-all duration-400'><a href="https://github.com/sonukr108" target='_blank'>MY GITHUB</a></li>
                         </ul>
