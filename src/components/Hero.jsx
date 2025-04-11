@@ -37,24 +37,24 @@ const Hero = () => {
                     <p className='text-3xl font-bold lg:text-5xl'>HI, I AM SONU!</p>
                     <p className="text-xl lg:text-3xl font-semibold text-wrap">
                         I'm a&nbsp;
-                        <span className='inline-block text-blue-500'>
+                        <span className="inline-block text-blue-500">
                             <AnimatePresence mode="wait">
-                                <motion.div
+                                <motion.span
                                     key={index}
                                     initial={{ y: "100%", opacity: 0 }}
                                     animate={{ y: "0%", opacity: 1 }}
                                     transition={{ duration: 0.3 }}
-                                    className=''
+                                    className="inline-block"
                                 >
                                     {texts[index]}
-                                </motion.div>
+                                </motion.span>
                             </AnimatePresence>
                         </span>
                     </p>
                     <p className='mt-3 lg:text-lg'>I am a passionate Web Developer with a strong interest in Frontend Development. I love building responsive websites using React and modern web technologies. I'm always eager to learn new skills and work on challenging projects.</p>
                     <button className='w-fit mt-3 py-2 font-bold hover:text-black hover:bg-white px-3 border-2 hover:rounded-xl transition-all duration-400 flex gap-3 items-center'>
                         <a href="https://drive.google.com/file/d/1SyP3bXkn9N0Q7kvYHPCVak2qIL_lSv_V/view?usp=sharing">MY RESUME</a>
-                        <FaArrowRightLong/>
+                        <FaArrowRightLong />
                     </button>
                 </div>
             </div>
