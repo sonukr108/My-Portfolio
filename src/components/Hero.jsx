@@ -52,7 +52,7 @@ const Hero = () => {
                         </span>
                     </p>
                     <p className='mt-3 lg:text-lg'>I am a passionate Web Developer with a strong interest in Frontend Development. I love building responsive websites using React and modern web technologies. I'm always eager to learn new skills and work on challenging projects.</p>
-                    <button className='w-fit mt-3 py-2 font-bold hover:text-black hover:bg-white px-3 border-2 hover:rounded-xl transition-all duration-400 flex gap-3 items-center'>
+                    <button className='w-fit mt-3 py-2 font-bold hover:text-black hover:bg-white px-3 border-2 hover:rounded-xl transition-all duration-400 flex gap-2 hover:gap-4 items-center'>
                         <a href="https://drive.google.com/file/d/1SyP3bXkn9N0Q7kvYHPCVak2qIL_lSv_V/view?usp=sharing">MY RESUME</a>
                         <FaArrowRightLong />
                     </button>
