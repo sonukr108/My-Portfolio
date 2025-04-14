@@ -4,15 +4,15 @@ import myImage from '../assets/myphoto.jpg'
 const About = () => {
   const [aboutSection, setAboutSection] = useState('skills');
   return (
-    <div id='about' className='px-[10%] py-10 w-full min-h-[155vh] md:min-h-[100vh]'>
+    <div id='about' className='px-[10%] py-10 w-full min-h-[140vh] md:min-h-[100vh]'>
       <div className=' flex flex-col gap-3 items-center justify-center'>
-        <p className='font-bold text-lg text-gray-500 py-3'>ABOUT ME</p>
-        <div className="w-full flex flex-col md:flex-row gap-5 md:gap-20 items-start">
+        <p className='font-bold text-xl lg:text-2xl text-gray-500 py-3'>ABOUT ME</p>
+        <div className="w-full flex flex-col md:flex-row gap-5 md:gap-10 lg:gap-15 items-start">
           <img src={myImage} alt="my workprocess" className='rounded-xl md:h-80' />
 
-          <div className="">
+          <div className="text-sm md:text-lg">
             <p className='text-base'>Hi, I'm Sonu. I'm dedicated to crafting seamless and delightful digital experiences, from initial design to front-end implementation. My skills span UI/UX (Figma, responsive design) and web development (HTML, CSS, JavaScript, Node.js, Tailwind CSS, Bootstrap). I strive to build impactful products. Let's collaborate and bring your vision to life!</p>
-            <div className="buttons flex gap-6 my-5 text-sm md:text-lg">
+            <div className="buttons flex gap-6 my-5">
               <button className={`cursor-pointer py-1  ${aboutSection === 'skills' ? 'text-blue-400 border-b-1 border-blue-400 transition-all duration-200' : 'text-gray-200'} font-semibold hover:text-blue-300`} onClick={() => setAboutSection('skills')}>
                 SKILLS
               </button>
