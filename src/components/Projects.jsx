@@ -2,12 +2,15 @@ import React from 'react'
 import QuickQuizImg from '../assets/quickquiz-project.png'
 import WeatherForecatImg from '../assets/weather-project.png'
 import StudyNestImg from '../assets/studynest-project.png'
+import ApnaMartImg from '../assets/apnamart-project.png'
+import XImg from '../assets/xclone-project.png'
+import TaskManagerImg from '../assets/tastmanager-project.png'
 
 const Projects = () => {
 
   const ProjectCard = ({ image, name, description, githubLink, liveLink }) => {
     return (
-      <div className="project-card max-w-85 bg-[url(/projectcardbg.svg)] bg-no-repeat p-4 rounded-lg flex flex-col gap-4 text-wrap border border-gray-600 shadow-md hover:shadow-gray-400 transition-all duration-500">
+      <div className="project-card max-w-85 bg-[url(/projectcardbg.svg)] bg-no-repeat p-4 rounded-lg flex flex-col gap-4 justify-between text-wrap border border-gray-600 shadow-md hover:shadow-gray-400 transition-all duration-500">
         <img src={image} alt={name} className="w-80 border-1 border-gray-600" />
         <p className="text-lg font-semibold">{name}</p>
         <p>{description}</p>
@@ -64,6 +67,27 @@ const Projects = () => {
             description="Study Nest perfect for BCA Sem 4 students who want to learn html, css and js, practice, and master web development fundamentals!"
             githubLink="https://github.com/sonukr108/Study-Nest---HTML-CSS-JS"
             liveLink="https://study-nest-html-css-js.vercel.app/"
+          />
+          <ProjectCard
+            image={ApnaMartImg}
+            name="Apna Mart UI Clone"
+            description="Apna Mart is a fully responsive e-commerce website clone that provides users with a seamless shopping experience."
+            githubLink="https://github.com/sonukr108/React-Assignment-and-Projects/tree/main/Apna%20Mart/apna-mart"
+            liveLink="https://apna-mart-clone-by-sonu.vercel.app"
+          />
+          <ProjectCard
+            image={TaskManagerImg}
+            name="Task Manager App"
+            description="This project is a simple and efficient Task Manager App built with React and Tailwind CSS."
+            githubLink="https://github.com/sonukr108/React-Assignment-and-Projects/tree/main/Task%20Manager%20App/task-manager-app"
+            liveLink="https://task-manager-app-by-sonu.vercel.app/"
+          />
+          <ProjectCard
+            image={XImg}
+            name="X UI Clone"
+            description="A modern UI clone of X built with HTML and TailwindCSS, sidebar navigation, and trending section with responsive design and smooth styling."
+            githubLink="https://github.com/sonukr108/X-Clone"
+            liveLink="https://x-clone-by-sonu.vercel.app/"
           />
         </div>
       </div>
