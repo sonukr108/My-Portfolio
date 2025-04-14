@@ -6,7 +6,8 @@ const About = () => {
   return (
     <div id='about' className='px-[10%] py-10 w-full min-h-[140vh] md:min-h-[100vh]'>
       <div className=' flex flex-col gap-3 items-center justify-center'>
-        <p className='font-bold text-xl lg:text-2xl text-gray-500 py-3'>ABOUT ME</p>
+        <p className='font-bold text-xl lg:text-2xl text-gray-500'>ABOUT ME</p>
+        <p className='text-xl lg:text-2xl font-semibold pb-3'>My <span className='text-blue-400'>Other Details</span></p>
         <div className="w-full flex flex-col md:flex-row gap-5 md:gap-10 lg:gap-15 items-start">
           <img src={myImage} alt="my workprocess" className='rounded-xl md:h-80' />
 
