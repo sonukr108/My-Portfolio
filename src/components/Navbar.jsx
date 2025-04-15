@@ -10,8 +10,15 @@ const Navbar = () => {
     const [menu, setMenu] = useState(false);
     const [active, setActive] = useState('');
     useEffect(() => {
-        Aos.init({ duration: 1500 });
+        if (window.innerWidth < 768) {
+          document.querySelectorAll('.desktop-aos').forEach(el => {
+            el.removeAttribute('data-aos');
+          });
+        }
+    
+        Aos.init({ duration: 2000 });
       }, []);
+
     return (
         <div className='w-full px-2 py-3 fixed top-0 left-0 font-bold z-50' data-aos="fade-down">
             <div className="bg-gray-800/30 backdrop-blur border-1 border-gray-600 flex flex-col items-center justify-between rounded-lg px-4 md:px-5 xl:px-8 py-4 max-w-[1280px] mx-auto">

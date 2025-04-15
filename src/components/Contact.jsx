@@ -110,7 +110,7 @@ const Contact = () => {
 
         <div className='flex flex-col md:flex-row gap-5 w-full justify-between'>
 
-          <div className="left w-full md:w-[50%] md:px-5 lg:px-10 flex flex-col gap-8 justify-center " data-aos="fade-right">
+          <div className="left w-full md:w-[50%] md:px-5 lg:px-10 flex flex-col gap-8 justify-center desktop-aos" data-aos="fade-right">
             <p className='text-2xl md:text-4xl font-semibold'>Let’s <span className='text-blue-500'>connect!</span> <br />I’m open to discussing <span className='text-blue-500'>projects</span>, <span className='text-blue-500'>collaborations</span>, or <span className='text-blue-500'>job</span> opportunities.</p>
             <div className='flex gap-1 md:gap-3 items-center bg-[#17171A] p-2 md:p-3 w-fit text-sm rounded-lg'>
               <MdOutlineEmail size={40} className='bg-[#2b2b31]  p-1 rounded-lg' />
@@ -128,7 +128,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="right w-full md:w-[50%] lg:w-[40%] bg-[#17171A] p-4 md:p-7 rounded-lg" data-aos="fade-left">
+          <div className="right w-full md:w-[50%] lg:w-[40%] bg-[#17171A] p-4 md:p-7 rounded-lg desktop-aos" data-aos="fade-left">
             <form ref={formRef} onSubmit={handleSubmit} className='flex flex-col gap-4'>
               <p className='flex items-center gap-3 text-lg md:text-xl font-semibold'>Send me a message <MdOutlineRocketLaunch /></p>
               <input type="text" onChange={(e) => handleChange('name', e.target.value)} placeholder='Full name *' name='name' required className={`w-full p-3 rounded-sm outline-none border-2 ${getBorderClass('name')}`} />
