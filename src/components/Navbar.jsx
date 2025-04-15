@@ -1,14 +1,19 @@
 import { Link } from 'react-scroll';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Logo from '../../public/favicon.png'
 import { IoMenu } from "react-icons/io5";
-import { RxCross2 } from "react-icons/rx";
+import { RxCross2 } from "react-icons/rx";import 'aos/dist/aos.css';
+import Aos from 'aos';
+
 
 const Navbar = () => {
     const [menu, setMenu] = useState(false);
     const [active, setActive] = useState('');
+    useEffect(() => {
+        Aos.init({ duration: 1500 });
+      }, []);
     return (
-        <div className='w-full px-2 py-3 fixed top-0 left-0 font-bold z-50'>
+        <div className='w-full px-2 py-3 fixed top-0 left-0 font-bold z-50' data-aos="fade-down">
             <div className="bg-gray-800/30 backdrop-blur border-1 border-gray-600 flex flex-col items-center justify-between rounded-lg px-4 md:px-5 xl:px-8 py-4 max-w-[1280px] mx-auto">
                 <div className='w-full flex items-center justify-between lg:text-xl'>
                     <Link to="home" smooth={true} duration={500} offset={-70}>

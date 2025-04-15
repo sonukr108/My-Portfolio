@@ -24,15 +24,16 @@ const Hero = () => {
         }, 1500);
         return () => clearInterval(interval);
     }, []);
+
     return (
         <div id='home' className='w-full px-[10%] md:px-[5%] xl:px-[16%] flex flex-col items-center pt-30 md:pb-42 md:pt-25 scroll-smooth'>
-            <div className='z-0 absolute hidden md:block'>
+            <div className='z-0 absolute hidden md:block' data-aos="fade-left">
                 <img src={Image} alt="my image" className='' />
             </div>
             <div className='z-0 md:hidden'>
                 <img src={MyImage} alt="my image" />
             </div>
-            <div className='w-full z-10'>
+            <div className='w-full z-10' data-aos="fade-right">
                 <div className='pt-5 md:pt-20 lg:pt-32 md:w-[60%] flex flex-col gap-1 lg:gap-3'>
                     <p className='text-3xl font-bold lg:text-5xl'>HI, I AM SONU!</p>
                     <p className="text-xl lg:text-3xl font-semibold text-wrap">

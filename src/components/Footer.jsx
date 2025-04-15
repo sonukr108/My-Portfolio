@@ -4,7 +4,7 @@ import LogoImg from '../../public/favicon.png'
 
 const Footer = () => {
     return (
-        <div className='bg-[#17171A] px-[10%] py-5 w-full flex flex-col gap-3'>
+        <div className='bg-[#17171A] px-[10%] py-5 w-full flex flex-col gap-3' data-aos="fade-up">
             <Link to="home" smooth={true} duration={500} offset={-70}>
                 <div className="logo-part flex gap-2 items-center cursor-pointer">
                     <img src={LogoImg} alt="S logo" className="h-9" />
