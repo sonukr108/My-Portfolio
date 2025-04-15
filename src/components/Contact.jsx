@@ -1,11 +1,50 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { MdOutlineRocketLaunch, MdArrowForward, MdOutlineEmail } from "react-icons/md";
+import emailjs from '@emailjs/browser'
+import { toast } from 'react-toastify'
 
 const Contact = () => {
 
-  const handleSubmit = () => {
-    alert("Form submited successfully")
-  }
+  const formRef = useRef();
+
+  const serviceKey = import.meta.env.VITE_EMAILSERVICEID
+  const tempelateKeyMe = import.meta.env.VITE_TEMPLATEID_ME
+  const tempelateKeyUser = import.meta.env.VITE_TEMPLATEID_USER
+  const publicProductKey = import.meta.env.VITE_PUBLICKEY
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        serviceKey,
+        tempelateKeyMe,
+        formRef.current,
+        publicProductKey
+      ).then(
+        (result) => {
+          console.log('SUCCESS!', result.text)
+          toast.success('Message sent successfully!')
+          formRef.current.reset()
+        },
+        (error) => {
+          console.log('FAILED...', error.text)
+          toast.error('Failed to send message. Please try again.')
+        }
+      )
+      emailjs.sendForm(
+        serviceKey,
+        tempelateKeyUser,
+        formRef.current,
+        publicProductKey
+      ).then(
+        (result) => {
+          console.log('SUCCESS! to user', result.text)
+        },
+        (error) => {
+          console.log('FAILED... to user', error.text)
+        }
+      )
+  };
 
   return (
     <div id='contact' className='px-[10%] py-10 w-full min-h-[140vh] md:min-h-[100vh]'>
@@ -27,11 +66,12 @@ const Contact = () => {
           </div>
 
           <div className="right w-full md:w-[50%] lg:w-[40%] bg-[#17171A] p-4 md:p-7 rounded-lg">
-            <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
+            <form ref={formRef} onSubmit={handleSubmit} className='flex flex-col gap-4'>
               <p className='flex items-center gap-3 text-lg md:text-xl font-semibold'>Send me a message <MdOutlineRocketLaunch /></p>
-              <input type="text" placeholder='Full name *' required className='w-full border-1 border-gray-500 p-3 rounded-sm outline-none focus:border-green-500' />
-              <input type="text" placeholder='Phone number *' className='w-full border-1 border-gray-500 p-3 rounded-sm outline-none' />
-              <input type="email" placeholder='Email address *' required className='w-full border-1 border-gray-500 p-3 rounded-sm outline-none' />
+              <input type="text" placeholder='Full name *' name='name' required className='w-full border-1 border-gray-500 p-3 rounded-sm outline-none focus:border-green-500' />
+              <input type="text" placeholder='Phone number *' name='phone' className='w-full border-1 border-gray-500 p-3 rounded-sm outline-none' />
+              <input type="email" placeholder='Email address *' name='email' required className='w-full border-1 border-gray-500 p-3 rounded-sm outline-none' />
+              <input type="text" placeholder='Subject' name='subject' className='w-full border-1 border-gray-500 p-3 rounded-sm outline-none' />
               <div>
                 <label htmlFor="message">Message <span className='text-red-600'>*</span></label>
                 <textarea name="message" id="message" required className='w-full border-1 border-gray-500 p-3 rounded-sm outline-none'></textarea>
