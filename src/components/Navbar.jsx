@@ -24,7 +24,7 @@ const Navbar = () => {
                     <div className='hidden md:flex text-sm lg:text-lg'>
                         <ul className='list-none text-gray-300 w-full flex gap-2 lg:gap-7 items-center justify-center'>
                             {['home', 'about', 'projects', 'contact'].map((item) => (
-                                <li key={item} className={`${active === item ? 'text-blue-500 border-b-2 border-blue-500' : 'text-gray-300'} py-1 hover:text-white hover:border-b-2 hover:border-white cursor-pointer transition-all duration-300`}>
+                                <li key={item} className={`${active === item ? 'text-blue-500 border-b-2 border-blue-500' : 'text-gray-300'} py-1 hover:text-blue-300 hover:border-b-2 hover:border-white cursor-pointer transition-all duration-300`}>
                                     <Link to={item} spy={true} smooth={true} offset={-70} duration={500} onClick={() => setActive(item)} className='uppercase'>{item === 'about' ? 'About Me' : item === 'contact' ? 'Contact Us' : item}</Link>
                                 </li>
                             ))}

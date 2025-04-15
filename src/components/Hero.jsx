@@ -25,7 +25,7 @@ const Hero = () => {
         return () => clearInterval(interval);
     }, []);
     return (
-        <div id='home' className='w-full px-[10%] md:px-[5%] xl:px-[12%] flex flex-col items-center pt-30 md:pb-42 md:pt-25 scroll-smooth'>
+        <div id='home' className='w-full px-[10%] md:px-[5%] xl:px-[15%] flex flex-col items-center pt-30 md:pb-42 md:pt-25 scroll-smooth'>
             <div className='z-0 absolute hidden md:block'>
                 <img src={Image} alt="my image" className='' />
             </div>
