@@ -6,8 +6,8 @@ const About = () => {
 
   const [aboutSection, setAboutSection] = useState('skills');
   return (
-    <div id='about' className='px-[10%] py-10 w-full min-h-[140vh] md:min-h-[100vh]' data-aos="fade-up">
-      <div className=' flex flex-col gap-3 items-center justify-center'>
+    <div id='about' className='px-[10%] pt-10 w-full min-h-[140vh] md:min-h-[100vh]' >
+      <div className=' flex flex-col gap-3 items-center justify-center desktop-aos'  data-aos="fade-up">
         <p className='font-bold text-xl lg:text-2xl text-gray-500'>ABOUT ME</p>
         <p className='text-xl lg:text-2xl font-semibold pb-3'>My <span className='text-blue-400'>Other Details</span></p>
 

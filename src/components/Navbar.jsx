@@ -2,7 +2,8 @@ import { Link } from 'react-scroll';
 import React, { useEffect, useState } from 'react'
 import Logo from '../../public/favicon.png'
 import { IoMenu } from "react-icons/io5";
-import { RxCross2 } from "react-icons/rx";import 'aos/dist/aos.css';
+import { RxCross2 } from "react-icons/rx";
+import 'aos/dist/aos.css';
 import Aos from 'aos';
 
 
@@ -15,8 +16,8 @@ const Navbar = () => {
             el.removeAttribute('data-aos');
           });
         }
-    
         Aos.init({ duration: 2000 });
+        
       }, []);
 
     return (
