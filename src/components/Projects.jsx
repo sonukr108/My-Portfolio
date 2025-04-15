@@ -43,7 +43,7 @@ const Projects = () => {
       <div className=' flex flex-col gap-3 items-center justify-center'>
         <p className='font-bold text-xl lg:text-2xl text-gray-500'>PROJECTS</p>
         <p className='text-xl lg:text-2xl font-semibold pb-3'>My <span className='text-blue-400'>Completed Projects</span></p>
-        <div className="card-container flex flex-wrap gap-5 justify-between">
+        <div className="card-container flex flex-wrap gap-5">
 
           <ProjectCard
             image={QuickQuizImg}
