@@ -26,7 +26,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <div id='home' className='w-full px-[10%] md:px-[5%] xl:px-[16%] flex flex-col items-center pt-30 md:pb-42 md:pt-25 scroll-smooth' data-aos="fade-top">
+        <div id='home' className='w-full px-[10%] md:px-[5%] xl:px-[16%] flex flex-col items-center pt-30 md:pb-42 md:pt-25 scroll-smooth' data-aos="fade-up">
             <div className='z-0 absolute hidden md:block desktop-aos' data-aos="fade-left">
                 <img src={Image} alt="my image" className='' />
             </div>
