@@ -10,7 +10,7 @@ const texts = [
     "Frontend Engineer",
     "MERN Stack Developer",
     "Creative Coder",
-    "UI/UX Enthusiast",
+    "UI/UX Designer",
     "JavaScript Lover",
     "Tech Explorer",
 ];

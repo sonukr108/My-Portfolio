@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { MdOutlineRocketLaunch, MdArrowForward, MdOutlineEmail } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
 import emailjs from '@emailjs/browser'
 import { toast } from 'react-toastify'
 
@@ -47,7 +48,7 @@ const Contact = () => {
     if (errors[field] === null) return 'border-gray-500';
     return errors[field] ? 'border-red-500' : 'border-green-500';
   };
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -115,7 +116,14 @@ const Contact = () => {
               <MdOutlineEmail size={40} className='bg-[#2b2b31]  p-1 rounded-lg' />
               <div>
                 <p className='font-semibold'>Mail me at</p>
-                <a href="mailto:bhaiyasonu108@gmail.com" className='text-blue-500'>bhaiyasonu108@gmail.com</a>
+                <a href="mailto:bhaiyasonu108@gmail.com" target='_blank' className='text-blue-500'>bhaiyasonu108@gmail.com</a>
+              </div>
+            </div>
+            <div className='flex gap-1 md:gap-3 items-center bg-[#17171A] p-2 md:p-3 w-fit text-sm rounded-lg'>
+              <FaLinkedin size={40} className='bg-[#2b2b31]  p-1 rounded-lg' />
+              <div>
+                <p className='font-semibold'>Linked in</p>
+                <a href="https://www.linkedin.com/in/sonu-kumar-verma-7413b5335/" target='_blank' className='text-blue-500'>Sonu Kumar Verma</a>
               </div>
             </div>
           </div>
